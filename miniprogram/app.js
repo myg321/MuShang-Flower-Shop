@@ -21,19 +21,17 @@ App({
         //     method: 'GET'
         // })
 
-        const res = await instance.get('index/findBanner', null, {
+        const res = await instance.get('/index/findBanner', null, {
             isLoading: true
         }).catch((err) => {
             console.log(err)
         })
         console.log(res)
 
-        // const res = instance.all(instance.get('index/findBanner'), instance.get('index/findCategory1'),)
+        // const res = instance.all(instance.get('/index/findBanner'), instance.get('/index/findCategory1'),)
 
         // console.log(wx.getAccountInfoSync())
 
-        const SwipperRes = await reqSwiperData()
-        console.log(SwipperRes)
 
     }
 })
