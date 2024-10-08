@@ -21,12 +21,12 @@ App({
         //     method: 'GET'
         // })
 
-        const res = await instance.get('/index/findBanner', null, {
-            isLoading: true
-        }).catch((err) => {
-            console.log(err)
-        })
-        console.log(res)
+        // const res = await instance.get('/index/findBanner', null, {
+        //     isLoading: true
+        // }).catch((err) => {
+        //     console.log(err)
+        // })
+        // console.log(res)
 
         // const res = instance.all(instance.get('/index/findBanner'), instance.get('/index/findCategory1'),)
 

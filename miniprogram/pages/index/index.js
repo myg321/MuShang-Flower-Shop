@@ -11,14 +11,14 @@ Page({
         activeList: [], // 活动广告
         guessList: [], // 猜你喜欢
         hotList: [], // 人气推荐
-        loading: true  // loading时是否展示骨架屏，默认为 true
+        loading: true // loading时是否展示骨架屏，默认为 true
     },
 
     // get index page data
     async getIndexData() {
         // 数组每一项是 Promise 产生的结果，并且是按照顺序返回
         const res = await reqIndexData()
-        console.log(res)
+        // console.log(res)
 
         // after obtaining data, assign values to them
         this.setData({
