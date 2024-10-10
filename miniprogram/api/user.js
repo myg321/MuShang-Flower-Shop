@@ -18,3 +18,12 @@ export const reqLogin = (code) => {
 export const reqUserInfo = () => {
     return http.get('/weixin/getuserInfo')
 }
+
+/**
+ * @description Update user info
+ * @param {*} updateInfo request parameters: username & user avatar, object format
+ * @returns Promise
+ */
+export const reqUpdateUserInfo = (updateInfo) => {
+    return http.post('/weixin/updateUser', updateInfo)
+}
