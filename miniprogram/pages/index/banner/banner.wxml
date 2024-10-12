@@ -14,7 +14,8 @@
             <swiper-item class="swiper-item">
                 <navigator
                     class="navigator"
-                    url="/pages/goods/detail/detail?goodsId={{ item.id }}"
+                    url="/modules/goodModule/pages/goods/detail/detail?goodsId={{ item.id }}"
+                    hover-class="none"
                 >
                     <image class="img" src="{{ item.imageUrl }}"></image>
                 </navigator>

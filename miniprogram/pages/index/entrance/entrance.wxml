@@ -8,7 +8,7 @@
         <!-- 导航链接 -->
         <navigator
             class="navigator-nav"
-            url="/pages/goods/list/list?category1Id={{ item.id }}"
+            url="/modules/goodModule/pages/goods/list/list?category1Id={{ item.id }}"
         >
             <image class="nav-img" src="{{ item.imageUrl }}" />
             <text class="nav-text">{{ item.name }}</text>

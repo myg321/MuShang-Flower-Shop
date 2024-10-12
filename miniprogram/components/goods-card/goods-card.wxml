@@ -2,7 +2,7 @@
 <view class="goods_cart_container">
     <navigator
         class="navigator_nav"
-        url="/pages/goods/detail/detail?goodsId={{ goodItem.id }}"
+        url="/modules/goodModule/pages/goods/detail/detail?goodsId={{ goodItem.id }}"
     >
         <!-- 商品图片 -->
         <image class="good_img" src="{{ goodItem.imageUrl }}" mode="widthFix" />

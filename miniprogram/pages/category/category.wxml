@@ -25,7 +25,7 @@
                 >
                     <navigator
                         class="navigator"
-                        url="/pages/goods/list/list?category2Id={{ item.id }}"
+                        url="/modules/goodModule/pages/goods/list/list?category2Id={{ item.id }}"
                     >
                         <image class="" src="{{ item.imageUrl }}"></image>
                         <text class="goods_item_name">{{ item.name }}</text>

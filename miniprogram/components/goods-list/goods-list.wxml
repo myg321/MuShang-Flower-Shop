@@ -16,7 +16,7 @@
     <view class="goods_more">
         <navigator
             class="goods_more_btn"
-            url="/pages/goods/list/list"
+            url="/modules/goodModule/pages/goods/list/list"
             hover-class="navigator-hover"
             open-type="navigate"
         >
