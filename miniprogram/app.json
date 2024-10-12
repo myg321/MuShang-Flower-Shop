@@ -85,5 +85,6 @@
             "network": "all",
             "packages": ["settingModule"]
         }
-    }
+    },
+    "requiredPrivateInfos": ["chooseLocation"]
 }

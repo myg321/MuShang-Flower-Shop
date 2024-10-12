@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "新增收货地址",
+          "pathName": "modules/settingModule/pages/address/add/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "我的页面",
           "pathName": "pages/my/my",
           "query": "",
