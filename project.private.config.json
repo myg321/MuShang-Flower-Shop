@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "购物车页面",
+          "pathName": "pages/cart/cart",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "新增收货地址",
           "pathName": "modules/settingModule/pages/address/add/index",
           "query": "",
