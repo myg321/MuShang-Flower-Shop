@@ -3,10 +3,19 @@
 <view class="container address-list" bind:tap="onSwipeCellPage">
     <view class="list-warpper" wx:if="{{ addressList.length }}">
         <view wx:for="{{ addressList }}" wx:key="id" class="list-item">
-            <van-swipe-cell right-width="{{ 65 }}" bind:open="onSwipeCellOpen" id="swipe-cell-{{ item.id }}" bind:click="onSwipeCellClick">
+            <van-swipe-cell
+                right-width="{{ 65 }}"
+                bind:open="onSwipeCellOpen"
+                id="swipe-cell-{{ item.id }}"
+                bind:click="onSwipeCellClick"
+            >
                 <van-cell-group border="{{ false }}">
                     <view class="list-item-box">
-                        <view class="info">
+                        <view
+                            class="info"
+                            bind:tap="changeAddress"
+                            data-id="{{ item.id }}"
+                        >
                             <view class="user-info">
                                 <text>{{ item.name }}</text>
                                 <text>{{ item.phone }}</text>
@@ -33,7 +42,12 @@
                     </view>
                 </van-cell-group>
                 <!-- <van-icon name="delete" size="22px" color="#999" /> -->
-                <view slot="right" class="van-swipe-cell__right" bind:tap="delAddress" data-id="{{ item.id }}">
+                <view
+                    slot="right"
+                    class="van-swipe-cell__right"
+                    bind:tap="delAddress"
+                    data-id="{{ item.id }}"
+                >
                     <text>删除</text>
                 </view>
             </van-swipe-cell>

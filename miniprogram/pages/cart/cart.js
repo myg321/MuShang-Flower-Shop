@@ -209,6 +209,22 @@ ComponentWithStore({
             }
         },
 
+        // go to order page
+        toOrder() {
+            // if no goods selected, show toast
+            if (this.data.totalPrice === 0) {
+                wx.showToast({
+                    title: '请选择需要购买的商品',
+                    icon: 'none'
+                })
+                return
+            }
+
+            wx.navigateTo({
+                url: '/modules/orderPayModule/pages/order/detail/detail'
+            })
+        },
+
 
         onShow() {
             this.showTipGetList()

@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "订单页面",
+          "pathName": "modules/orderPayModule/pages/order/detail/detail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "购物车页面",
           "pathName": "pages/cart/cart",
           "query": "",

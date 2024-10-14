@@ -9,6 +9,9 @@ import {
     swipeCellBehavior
 } from '../../../../../behaviors/swipeCellBehavior'
 
+// Get glbal data
+const app = getApp()
+
 Page({
     behaviors: [swipeCellBehavior],
 
@@ -62,9 +65,35 @@ Page({
         this.getAddressList()
     },
 
+    // Change address when clicking one address item
+    changeAddress(event) {
+        // Determine whetere entered from order page
+        if (this.flag !== '1') return
+
+        // Get clicked address id
+        const addressId = event.currentTarget.dataset.id
+        // console.log(addressId)
+
+        // Find clicked address id from address list
+        // Attention: find function, after '=>' should be a judgment statement, not '{}'
+        const address = this.data.addressList.find((item) =>
+            item.id === addressId
+        )
+
+        // If find this one, set its data into global data
+        if (address) {
+            app.globalData.address = address
+            wx.navigateBack()
+        }
+    },
+
 
     // Each time this page on show, update list rendering
     onShow() {
         this.getAddressList()
+    },
+
+    onLoad(options) {
+        this.flag = options.flag
     }
 })

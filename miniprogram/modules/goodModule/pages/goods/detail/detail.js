@@ -101,7 +101,7 @@ Page({
             }
         } else {
             wx.navigateTo({
-                url: `/pages/order/detail/detail?goodsId=${goodsId}&blessing=${blessing}`,
+                url: `/modules/orderPayModule/pages/order/detail/detail?goodsId=${goodsId}&blessing=${blessing}`
             })
         }
 
@@ -134,6 +134,11 @@ Page({
                 allCount: (allCount > 99 ? '99+' : allCount) + ''
             })
         }
+    },
+
+    // 
+    onTextAreaChange() {
+
     },
 
     // onLoad 钩子函数

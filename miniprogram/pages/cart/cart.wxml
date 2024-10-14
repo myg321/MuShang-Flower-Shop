@@ -81,6 +81,7 @@
         price="{{ totalPrice * 100 }}"
         button-text="去结算"
         tip="{{ true }}"
+        bind:submit="toOrder"
     >
         <van-checkbox
             value="{{ selectAllStatus }}"
