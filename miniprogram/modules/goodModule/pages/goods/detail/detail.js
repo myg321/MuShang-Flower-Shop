@@ -1,9 +1,9 @@
 import {
     reqGoodsInfo
-} from "@/api/goods"
+} from "../../../api/goods"
 import {
     userBehavior
-} from '@/behaviors/userBehavior'
+} from '../../../behaviors/userBehavior'
 import {
     reqAddCart,
     reqCartList
@@ -150,5 +150,17 @@ Page({
 
         // 计算购买数量
         this.getCartCount()
-    }
+    },
+
+    // Send miniprogram to friends
+    onShareAppMessage() {
+        return {
+            title: '所有的怦然心动，都是你',
+            pages: '/pages/index/index',
+            imageUrl: '../../assets/images/love.jpg'
+        }
+    },
+
+    // Share miniprogram to moments
+    onShareTimeline() {}
 })

@@ -1,7 +1,7 @@
 import {
     reqAddressList,
     reqDelAddress
-} from '../../../../../api/address'
+} from '../../../api/address'
 import {
     model
 } from '../../../../../utils/extendApi'

@@ -35,7 +35,18 @@ Page({
     onLoad() {
         // Call the callback to get index page data
         this.getIndexData()
-    }
+    },
 
+    // Send miniprogram to friends
+    onShareAppMessage() {
+        return {
+            title: '所有的怦然心动，都是你',
+            pages: '/pages/index/index',
+            imageUrl: '../../assets/images/love.jpg'
+        }
+    },
+
+    // Share miniprogram to moments
+    onShareTimeline() {}
 
 })

@@ -5,9 +5,6 @@ import {
     reqUserInfo
 } from '../../api/user'
 import {
-    toast
-} from '../../utils/extendApi'
-import {
     setStroage
 } from '../../utils/storage'
 
@@ -17,6 +14,9 @@ import {
 import {
     ComponentWithStore
 } from 'mobx-miniprogram-bindings'
+import {
+    debounce
+} from 'miniprogram-licia'
 
 ComponentWithStore({
 
@@ -29,7 +29,7 @@ ComponentWithStore({
     methods: {
 
         // click buttin to login 
-        login() {
+        login: debounce(function () {
             wx.login({
                 success: async ({
                     code
@@ -57,7 +57,7 @@ ComponentWithStore({
                     }
                 },
             })
-        },
+        }, 500),
 
         // get user Info
         async getUserInfo() {

@@ -1,7 +1,7 @@
 // import { QQMapWX } from '../../../../../libs/qqmap-wx-jssdk'
 // 使用上面的import方式，总是报错：QQMapWX is not a constructor，目前视为未解决错误
 // 使用旧版本导入方式（下面一行）成功导入
-var QQMapWX = require('../../../../../libs/qqmap-wx-jssdk.js');
+var QQMapWX = require('../../../libs/qqmap-wx-jssdk');
 
 // 引入 async-validator，async-validator 提供了一个构造函数
 import Schema from 'async-validator'
@@ -10,7 +10,7 @@ import {
     reqAddAddress,
     reqAddressInfo,
     reqUpdateAddress
-} from '../../../../../api/address'
+} from '../../../api/address'
 
 Page({
     // 页面的初始数据

@@ -1,6 +1,6 @@
 import {
     reqOrderList
-} from '@/api/orderpay'
+} from '../../../api/orderpay'
 
 Page({
     // 页面的初始数据

@@ -4,8 +4,7 @@
         "pages/category/category",
         "pages/cart/cart",
         "pages/my/my",
-        "pages/login/login",
-        "pages/settings/settings"
+        "pages/login/login"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -72,7 +71,8 @@
             "pages": [
                 "pages/address/add/index",
                 "pages/address/list/index",
-                "pages/profile/profile"
+                "pages/profile/profile",
+                "pages/settings/settings"
             ]
         },
         {
@@ -87,7 +87,7 @@
         }
     ],
     "preloadRule": {
-        "pages/settings/settings": {
+        "pages/my/my": {
             "network": "all",
             "packages": ["settingModule"]
         },
@@ -98,10 +98,15 @@
         "pages/cart/cart": {
             "network": "all",
             "packages": ["orderPayModule"]
+        },
+        "modules/orderPayModule/pages/order/detail/detail": {
+            "network": "all",
+            "packages": ["settingModule"]
         }
     },
     "requiredPrivateInfos": ["chooseLocation"],
     "resolveAlias": {
         "@/*": "/*"
-    }
+    },
+    "lazyCodeLoading": "requiredComponents"
 }

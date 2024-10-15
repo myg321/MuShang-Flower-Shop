@@ -5,14 +5,18 @@ import {
     reqSubmitOrder,
     reqPreBuyInfo,
     reqPayStatus
-} from '@/api/orderpay'
+} from '../../../api/orderpay'
 
 import {
     formatTime
-} from '@/utils/formatTime'
+} from '../../../utils/formatTime'
 
 // 引入 async-validator，async-validator 提供了一个构造函数
 import Schema from 'async-validator'
+
+import {
+    debounce
+} from 'miniprogram-licia'
 
 // Get glbal data
 const app = getApp()
@@ -114,7 +118,7 @@ Page({
     },
 
     // Submit order
-    async submitOrder() {
+    submitOrder: debounce(async function () {
         // Deconstructing data from 'data'
         const {
             buyName,
@@ -154,7 +158,7 @@ Page({
             // Get prepay info and payment params
             this.advancePay()
         }
-    },
+    }, 500),
 
     // Get prepay info and payment params
     async advancePay() {

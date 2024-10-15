@@ -2,7 +2,7 @@
 
 import {
     reqGoodsList
-} from "../../../../../api/goods"
+} from "../../../api/goods"
 
 Page({
     /**
@@ -101,6 +101,18 @@ Page({
 
         // Get goods list data
         this.getGoodsList()
-    }
+    },
+
+    // Send miniprogram to friends
+    onShareAppMessage() {
+        return {
+            title: '所有的怦然心动，都是你',
+            pages: '/pages/index/index',
+            imageUrl: '../../assets/images/love.jpg'
+        }
+    },
+
+    // Share miniprogram to moments
+    onShareTimeline() {}
 
 })
