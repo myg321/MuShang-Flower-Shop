@@ -2,6 +2,16 @@
 
 
 
+![](https://picbed-toootu.oss-cn-wuhan-lr.aliyuncs.com/pics/202410151817592.jpg)
+
+
+
+![](https://picbed-toootu.oss-cn-wuhan-lr.aliyuncs.com/pics/202410151818572.jpg)
+
+
+
+
+
 ## **一、项目概述**
 
 [慕尚花坊] 是一款 同城鲜花订购 的小程序，专业提供各地鲜花速递、鲜花预定、网上订花、包月鲜花等服务。最快3小时送花上门，保证花材新鲜和鲜花质量，可先送花后付款，专业花艺师傅精美包扎，品质保证，至诚服务。
@@ -67,7 +77,7 @@
 1. 克隆本项目到本地：
 
 ```plaintext
-   git clone <项目的 GitHub 地址>
+   git clone git@github.com:myg321/MuShang-Flower-Shop.git
 ```
 
 2. 打开微信开发者工具，选择 “导入项目”，并选择克隆到本地的项目文件夹。
